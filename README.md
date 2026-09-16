@@ -71,7 +71,7 @@
     <div class="note">
 备注：如遇到登录不来验证码的情况，更换节点重新登录或请检查客户端是否需要更新，或使用TG的第三方客户端：苹果直接在 App Store 里面搜索 Nicegram 或 Swiftgram，安卓则使用 Telegram X。
 
-Telegram X 下载地址：https://github.com/TGX-Android/Telegram-X/releases/download/v0.26.9.1730/Telegram-X-0.26.9.1730.apk
+Telegram X 下载地址：<a href="https://github.com/TGX-Android/Telegram-X/releases/download/v0.26.9.1730/Telegram-X-0.26.9.1730.apk" target="_blank">点此下载 Telegram X</a>
 
 有关于账号使用安全建议：
 购买后请立即检查账户，登陆上去后请勿频繁操作，新设备登陆 24 小时后：修改两部验证密码（设置-隐私-两步验证），踢出其它不属于你的设备（设置-隐私-登录设备）
