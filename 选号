@@ -3,173 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>全部商品</title>
+<title>商品目录</title>
 <style>
-  * { box-sizing: border-box; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    margin: 0;
     font-family: -apple-system, "Microsoft YaHei", sans-serif;
     background: #f5f7fa;
     color: #222;
+    padding: 20px;
   }
-
-  /* 顶部导航 */
-  header {
-    background: #fff;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-  }
-  .logo {
-    width: 36px; height: 36px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #ff7a7a, #ff4d4d);
-    display: flex; align-items: center; justify-content: center;
-    color: #fff; font-weight: bold; font-size: 14px;
-  }
-  nav { display: flex; gap: 20px; font-size: 15px; }
-  nav a { color: #333; text-decoration: none; }
-  nav a:hover { color: #1677ff; }
-
-  /* 主体布局 */
   .container {
-    max-width: 1100px;
-    margin: 20px auto;
-    display: flex;
-    gap: 16px;
-    padding: 0 16px;
+    max-width: 600px;
+    margin: 0 auto;
   }
-
-  /* 左侧分类 */
-  aside {
-    width: 220px;
+  h1 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .sub {
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 20px;
+  }
+  .section {
     background: #fff;
     border-radius: 12px;
-    padding: 12px 0;
-    flex-shrink: 0;
-    height: fit-content;
+    padding: 16px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   }
-  .cat {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 16px;
-    font-size: 14px;
-    color: #444;
-  }
-  .cat.active {
-    background: #eaf3ff;
-    color: #1677ff;
+  .section-title {
+    font-size: 15px;
     font-weight: bold;
-  }
-  .cat .count { color: #999; font-size: 13px; }
-
-  /* 右侧商品 */
-  main {
-    flex: 1;
-    background: #fff;
-    border-radius: 12px;
-    padding: 8px 16px;
+    color: #1677ff;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eaf3ff;
+    margin-bottom: 10px;
   }
   .item {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
-    border-bottom: 1px solid #f0f0f0;
-    text-decoration: none;
-    color: inherit;
+    padding: 9px 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 14px;
   }
   .item:last-child { border-bottom: none; }
-  .icon {
-    width: 40px; height: 40px;
-    border-radius: 10px;
-    background: #2AABEE;
-    color: #fff;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 20px;
-    margin-right: 12px;
-    flex-shrink: 0;
-  }
-  .info { flex: 1; }
-  .title { font-size: 15px; line-height: 1.4; }
-  .right { text-align: right; margin-left: 12px; flex-shrink: 0; }
-  .stock { font-size: 12px; color: #999; margin-bottom: 4px; }
-  .price { font-size: 16px; color: #e02020; font-weight: bold; }
-  .arrow { color: #bbb; font-size: 18px; margin-left: 8px; }
-
-  /* 手机适配 */
-  @media (max-width: 700px) {
-    .container { flex-direction: column; }
-    aside { width: 100%; }
+  .name { color: #333; flex: 1; padding-right: 10px; }
+  .price { color: #e02020; font-weight: bold; flex-shrink: 0; }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #bbb;
+    margin-top: 20px;
+    padding: 16px;
   }
 </style>
 </head>
 <body>
-
-<header>
-  <div class="logo">A</div>
-  <nav>
-    <a href="shop.html">🏠网站首页</a>
-    <a href="shop.html">🛒全部商品</a>
-    <a href="#">📘账号教程</a>
-  </nav>
-</header>
-
 <div class="container">
-  <!-- 左侧分类 -->
-  <aside>
-    <div class="cat active"><span>全部</span><span class="count">36</span></div>
-    <div class="cat"><span>✈️ Telegram</span><span class="count">3</span></div>
-    <div class="cat"><span>📘 Facebook脸书</span><span class="count">0</span></div>
-    <div class="cat"><span>🐦 Twitter推特</span><span class="count">6</span></div>
-    <div class="cat"><span>📷 Instagram照片墙</span><span class="count">0</span></div>
-    <div class="cat"><span>🍎 苹果id</span><span class="count">23</span></div>
-    <div class="cat"><span>✉️ Google谷歌邮箱</span><span class="count">0</span></div>
-    <div class="cat"><span>📧 微软邮箱</span><span class="count">0</span></div>
-    <div class="cat"><span>🎮 Discord</span><span class="count">4</span></div>
-  </aside>
 
-  <!-- 右侧商品 -->
-  <main>
-    <a class="item" href="index.html">
-      <div class="icon">✈</div>
-      <div class="info">
-        <div class="title">Telegram账号 +1美国 API链接 新号</div>
-      </div>
-      <div class="right">
-        <div class="stock">库存 1,430</div>
-        <div class="price">¥25.00</div>
-      </div>
-      <div class="arrow">›</div>
-    </a>
+  <h1>商品目录</h1>
+  <div class="sub">长期稳定 · 自动发货 · 售后无忧</div>
 
-    <a class="item" href="index.html">
-      <div class="icon">✈</div>
-      <div class="info">
-        <div class="title">Telegram账号 +1美国 API链接 一年老号</div>
-      </div>
-      <div class="right">
-        <div class="stock">库存 422</div>
-        <div class="price">¥40.00</div>
-      </div>
-      <div class="arrow">›</div>
-    </a>
+  <div class="section">
+    <div class="section-title">✈️ Telegram</div>
+    <div class="item"><span class="name">Telegram账号 +1美国 新号</span><span class="price">¥25</span></div>
+    <div class="item"><span class="name">Telegram账号 +1美国 一年老号</span><span class="price">¥40</span></div>
+    <div class="item"><span class="name">Telegram账号 +57哥伦比亚 半年+</span><span class="price">¥30</span></div>
+  </div>
 
-    <a class="item" href="index.html">
-      <div class="icon">✈</div>
-      <div class="info">
-        <div class="title">Telegram账号 +57哥伦比亚 API链接 注册半年+</div>
-      </div>
-      <div class="right">
-        <div class="stock">库存 0</div>
-        <div class="price">¥30.00</div>
-      </div>
-      <div class="arrow">›</div>
-    </a>
-  </main>
+  <div class="section">
+    <div class="section-title">🍎 苹果ID（已开通iCloud）</div>
+    <div class="item"><span class="name">美国老苹果ID（已开通iCloud）</span><span class="price">¥36</span></div>
+    <div class="item"><span class="name">香港老苹果ID（已开通iCloud）</span><span class="price">¥36</span></div>
+    <div class="item"><span class="name">台湾老苹果ID（已开通iCloud）</span><span class="price">¥36</span></div>
+    <div class="item"><span class="name">日本老苹果ID（已开通iCloud）</span><span class="price">¥36</span></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🍎 苹果ID（普通）</div>
+    <div class="item"><span class="name">美国老苹果ID</span><span class="price">¥30</span></div>
+    <div class="item"><span class="name">日本老苹果ID</span><span class="price">¥30</span></div>
+    <div class="item"><span class="name">香港老苹果ID</span><span class="price">¥30</span></div>
+    <div class="item"><span class="name">台湾老苹果ID</span><span class="price">¥30</span></div>
+    <div class="item"><span class="name">马来西亚老苹果ID</span><span class="price">¥30</span></div>
+    <div class="item"><span class="name">越南老苹果ID</span><span class="price">¥30</span></div>
+    <div class="item"><span class="name">泰国老苹果ID</span><span class="price">¥30</span></div>
+    <div class="item"><span class="name">印尼老苹果ID</span><span class="price">¥30</span></div>
+    <div class="item"><span class="name">土耳其老苹果ID</span><span class="price">¥30</span></div>
+    <div class="item"><span class="name">褪色老苹果ID</span><span class="price">¥30</span></div>
+    <div class="item"><span class="name">新加坡老苹果ID</span><span class="price">¥30</span></div>
+    <div class="item"><span class="name">墨西哥老苹果ID</span><span class="price">¥30</span></div>
+    <div class="item"><span class="name">英国老苹果ID</span><span class="price">¥30</span></div>
+    <div class="item"><span class="name">韩国老苹果ID</span><span class="price">¥30</span></div>
+    <div class="item"><span class="name">韩国17+19+苹果ID</span><span class="price">¥30</span></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🐦 推特 Twitter</div>
+    <div class="item"><span class="name">三绑-手机验证 2019-2024年</span><span class="price">¥12.9</span></div>
+    <div class="item"><span class="name">推特 2019-2025年</span><span class="price">¥10.9</span></div>
+    <div class="item"><span class="name">推特 2006-2018年</span><span class="price">¥10.9</span></div>
+    <div class="item"><span class="name">三绑-手机验证 2006-2018年</span><span class="price">¥9.9</span></div>
+    <div class="item"><span class="name">2026.1-2026.6 可关注</span><span class="price">¥13</span></div>
+    <div class="item"><span class="name">外显号 2006-2025年</span><span class="price">¥18</span></div>
+    <div class="item"><span class="name">三绑-无头像 安卓实机注册</span><span class="price">¥10.9</span></div>
+    <div class="item"><span class="name">双绑-带头像 300-400天</span><span class="price">¥14</span></div>
+    <div class="item"><span class="name">三绑-无头像 30天以上</span><span class="price">¥8.99</span></div>
+    <div class="item"><span class="name">三绑-携带头像 2021-2022年</span><span class="price">¥35</span></div>
+  </div>
+
+  <div class="footer">
+    价格如有变动，以当日为准
+  </div>
+
 </div>
-
 </body>
 </html>
